@@ -7,7 +7,6 @@ function App() {
 
         <span>
           Learn React2</span>
-
       </header>
     </div>
   );
