@@ -5,9 +5,9 @@ function App() {
     <div >
       <header >
 
-        <a>
-          Learn React
-        </a>
+        <span>
+          Learn React</span>
+
       </header>
     </div>
   );
