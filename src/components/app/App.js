@@ -6,7 +6,7 @@ function App() {
       <header >
 
         <span>
-          Learn React2</span>
+          Learn React</span>
       </header>
     </div>
   );
