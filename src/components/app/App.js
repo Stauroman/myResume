@@ -1,7 +1,7 @@
 import React, {Component} from "react"
 
 import './App.css';
-
+import ChangeUser from './roman'
 class App extends Component {
 
     state = {
@@ -9,6 +9,7 @@ class App extends Component {
         name: "Ivan",
         age: 25,
         isVisible: false,
+        arrNum: 0,
         users: ["Ivan", "Boris", "Roman", "Alex"],
         hrefs: [
             {href: '1.html', text: 'ссылка 1'},
@@ -20,10 +21,27 @@ class App extends Component {
     showName = () => {
         alert("Hello " + this.state.name)
     }
-    changeUser = () => {
-        this.setState({name: 'Nik', age: 30});
-    }
 
+
+    // changeUser = () => {
+    //     this.setState({
+    //             name:  () =>{
+    //                         вернуть элемент массива c именами
+    //                 },
+    //              age: 30
+    //         }
+    //     );
+    // }
+
+    changeUser = () => {
+            const {arrNum, users} = this.state;
+            let returnValue = users[arrNum];
+            this.setState({arrNum: arrNum+1});
+            if (arrNum === users.length-1) {
+                this.setState({arrNum: 0});
+            }
+            this.setState({name:returnValue})
+    }
     helloOrBye = () => {
         this.setState({hello: !this.state.hello})
     }
@@ -62,8 +80,9 @@ class App extends Component {
 
                 <br/>
                 <button onClick={this.showName}>Alert Button</button>
-                <button onClick={this.changeUser}>ChangeUser</button>
+                <button onClick={this.changeUser}>user Button</button>
                 <button onClick={this.toggleVisible}>{isVisible ? "HideContent" : "ShowContent"}</button>
+                <ChangeUser users={this.state.users} onClick={()=>this.changeUser()}/>
                 <button onClick={this.helloOrBye}>{hello ? "exit" : "enter"}</button>
             </div>
 
