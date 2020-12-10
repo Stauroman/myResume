@@ -38,6 +38,14 @@ class App extends Component {
         this.setState({isVisible: !this.state.isVisible})
     }
 
+    addUserToList = () => {
+        this.state.users.push("пункт");
+        this.setState({users: this.state.users} )};
+
+    deleteUserFromList = (index) => {
+        this.state.users.splice(index,1)
+        this.setState({users: this.state.users} )};
+
 
     render() {
 
@@ -47,10 +55,13 @@ class App extends Component {
 
         const usersList = this.state.users.map((item, index) => {
                 return (
-                    <li key={index}>{item} - {index + 1}</li>
+                    <li key={index}>{item} - {index + 1}
+                    <button onClick={this.deleteUserFromList.bind(this, index)}>delete </button></li>
                 )
             }
         )
+
+
         const hrefList = this.state.hrefs.map((item, index) => {
             return (
                 <li key={index}><a href={item.href}>{item.text}</a></li>
@@ -69,6 +80,8 @@ class App extends Component {
 
                 <br/>
                 <button onClick={this.greetUser}>Greet User</button>
+                <button onClick={this.addUserToList}>add element</button>
+                <button onClick={this.deleteUserFromList.bind(this,0)}>Delete element</button>
                 <button onClick={this.toggleVisibleInfo}>{isVisible ? "Hide User Info" : "Show User Info"}</button>
                 <ChangeUser  onClick={()=>this.handleChangeUser()}/>
                 <button onClick={this.helloOrBye}>{hello ? "exit" : "enter"}</button>
