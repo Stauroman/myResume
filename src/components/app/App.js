@@ -1,14 +1,14 @@
 import React, {Component} from "react"
 
 import './App.css';
-import ChangeUser from './roman'
+import ChangeUser from '../ChangeUser'
 class App extends Component {
-//1 branch
+
     state = {
         hello: true,
-        name: "Ivan",
+        name: "User",
         age: 25,
-        isVisible: false,
+        isVisible: true,
         arrNum: 0,
         users: ["Ivan", "Boris", "Roman", "Alex"],
         hrefs: [
@@ -18,22 +18,11 @@ class App extends Component {
         ]
     };
 
-    showName = () => {
+    greetUser = () => {
         alert("Hello " + this.state.name)
     }
 
-
-    // changeUser = () => {
-    //     this.setState({
-    //             name:  () =>{
-    //                         вернуть элемент массива c именами
-    //                 },
-    //              age: 30
-    //         }
-    //     );
-    // }
-
-    changeUser = () => {
+    handleChangeUser = () => {
             const {arrNum, users} = this.state;
             let returnValue = users[arrNum];
             this.setState({arrNum: arrNum+1});
@@ -45,7 +34,7 @@ class App extends Component {
     helloOrBye = () => {
         this.setState({hello: !this.state.hello})
     }
-    toggleVisible = () => {
+    toggleVisibleInfo = () => {
         this.setState({isVisible: !this.state.isVisible})
     }
 
@@ -79,10 +68,9 @@ class App extends Component {
                 </ul>
 
                 <br/>
-                <button onClick={this.showName}>Alert Button</button>
-                <button onClick={this.changeUser}>user Button</button>
-                <button onClick={this.toggleVisible}>{isVisible ? "HideContent" : "ShowContent"}</button>
-                <ChangeUser users={this.state.users} onClick={()=>this.changeUser()}/>
+                <button onClick={this.greetUser}>Greet User</button>
+                <button onClick={this.toggleVisibleInfo}>{isVisible ? "Hide User Info" : "Show User Info"}</button>
+                <ChangeUser  onClick={()=>this.handleChangeUser()}/>
                 <button onClick={this.helloOrBye}>{hello ? "exit" : "enter"}</button>
             </div>
 
