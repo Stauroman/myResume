@@ -2,6 +2,7 @@ import React, {Component} from "react"
 
 import './App.css';
 import ChangeUser from '../ChangeUser'
+import RegistrationForm from "../RegistrationForm";
 
 class App extends Component {
 
@@ -56,17 +57,10 @@ class App extends Component {
     }
     //вычисление года рождения:
     getBirthYear = () => {
-        const date = new Date;
-        const birthYear = date.getFullYear() - this.state.age;
+        const birthYear = new Date().getFullYear() - this.state.age;
         return birthYear
     }
 
-    // getFullNameArr = () => {
-    //     const fullName = this.state.fullNameStr.split("");
-    //     const lastName = fullName[0];
-    //     const firstName = fullName[1];
-    //     const patronymic = fullName[2];
-    // }
     render() {
 
         const {name, age, hello, isVisible} = this.state;
@@ -128,6 +122,7 @@ class App extends Component {
                 <button onClick={this.toggleVisibleInfo}>{isVisible ? "Hide User Info" : "Show User Info"}</button>
                 <ChangeUser onClick={() => this.handleChangeUser()}/>
                 <button onClick={this.helloOrBye}>{hello ? "exit" : "enter"}</button>
+                <RegistrationForm />
             </div>
 
         )
