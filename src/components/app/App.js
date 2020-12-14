@@ -57,8 +57,8 @@ class App extends Component {
     }
     //вычисление года рождения:
     getBirthYear = () => {
-        const birthYear = new Date().getFullYear() - this.state.age;
-        return birthYear
+        return new Date().getFullYear() - this.state.age
+
     }
 
     render() {
@@ -88,6 +88,9 @@ class App extends Component {
         const patronymic = fullName[2];
         return (
             <div>
+                <header>
+                    <div>Добро пожаловать в мой учебный проект </div>
+                </header>
                 {visibleContent}
                 <ul>
                     {hrefList}

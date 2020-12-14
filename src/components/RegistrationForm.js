@@ -59,42 +59,39 @@ export default class RegistrationForm extends Component {
 
     render() {
         return (
-            <div>
-                <p>Registration Form</p>
-                <p>e-mail:</p>
-                <input name="email"
-                       placeholder="Введите адрес электронной почты"
-                       onChange={this.handleChange}
-                       value={this.state.email}/>
-                <br/>
-                <p>логин:</p>
-                <input name="login"
-                       placeholder="Введите логин"
-                       onChange={this.handleChange}
-                       value={this.state.login}/>
-                <br/>
-                <p>имя:</p>
-                <input name="name"
-                       placeholder="Введите имя"
-                       onChange={this.handleChange}
-                       value={this.state.name}/>
-                <br/>
-                <p>фамилия:</p>
-                <input name="surname"
-                       placeholder="Введите фамилию"
-                       onChange={this.handleChange}
-                       value={this.state.surname}/>
-                <br/>
-                <p>password:</p>
-                <input name="password"
-                       placeholder="Введите адрес электронной почты"
-                       onChange={this.handleChange}
-                       value={this.state.password}/>
-                <br/>
-                {/*<button onSubmit={}>Зарегестрироваться</button>*/}
-                <button onClick={this.logger}>valid?</button>
-
-            </div>
+            <form className="container">
+                <div className="form-group">
+                    <label htmlFor="email">Email адрес</label>
+                    <input name="email" type="email" className="form-control" id="email"
+                           placeholder="Введите адрес электронной почты"
+                           onChange={this.handleChange}
+                           value={this.state.email}/>
+                </div>
+                <div className="form-group">
+                    <label htmlFor="login">Введите ваш никнейм</label>
+                    <input name="login" type="login" className="form-control" id="login"
+                           placeholder="Введите логин"
+                           onChange={this.handleChange}
+                           value={this.state.login}/>
+                </div>
+                <div className="form-group">
+                    <label htmlFor="password">придумайте пароль, не менее 8ми символов</label>
+                    <input name="password" type="password" className="form-control" id="password"
+                           placeholder="Введите пароль"
+                           onChange={this.handleChange}
+                           value={this.state.password}/>
+                </div>
+                <div className="form-group">
+                    <label htmlFor="password">повторите пароль</label>
+                    <input name="password" type="password" className="form-control" id="password"
+                           placeholder="Повторите пароль"
+                           onChange={this.handleChange}
+                           value={this.state.password}/>
+                </div>
+                    {/*<button onSubmit={}>Зарегестрироваться</button>*/}
+                    <button type="submit" className="btn btn-primary"
+                        onClick={this.logger}>valid?</button>
+            </form>
         )
     }
 }
