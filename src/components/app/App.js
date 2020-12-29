@@ -2,7 +2,7 @@ import React, {Component} from "react"
 
 import './App.css';
 import RegistrationForm from "../RegistrationForm";
-
+import LoginForm from "../LoginForm";
 class App extends Component {
     //
     // state = {
@@ -125,6 +125,7 @@ class App extends Component {
                 {/*<ChangeUser onClick={() => this.handleChangeUser()}/>*/}
                 {/*<button onClick={this.helloOrBye}>{hello ? "exit" : "enter"}</button>*/}
                 <RegistrationForm />
+                <LoginForm />
             </div>
 
         )
