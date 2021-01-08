@@ -12,6 +12,7 @@ class App extends Component {
             <div>
                 <Router>
                 <Header/>
+                <Route path="/" exact render={()=> <h1>Main Page</h1>} />
                 <Route path="/registration" component={RegistrationForm} />
                 <Route path="/login" component={LoginForm} />
                 </Router>

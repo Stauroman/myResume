@@ -17,6 +17,7 @@ export default class LoginForm extends Component {
 
         const password = JSON.parse(localStorage.getItem(this.state.login)).password;
         this.setState({isPasswordValid: (password === this.state.password)});
+
         this.props.history.push('/')
     }
     logInfo = () => {
@@ -25,7 +26,7 @@ export default class LoginForm extends Component {
 
     render() {
 
-        const text = this.state.isPasswordValid ? <p>пароль верен</p> : <p>пароль неверен</p>
+        // const text = this.state.isPasswordValid ? <p>пароль верен</p> : <p>пароль неверен</p>
         return (
             <div>
                 <form className="container">
@@ -45,11 +46,9 @@ export default class LoginForm extends Component {
                                    value={this.state.password}/>
                         </div>
                     </div>
-
+                    <button className="btn btn-primary" onClick={this.passwordCheck}>Войти</button>
                 </form>
-                <button className="btn btn-primary" onClick={this.passwordCheck}>Войти</button>
-                {text}
-                <button onClick={this.logInfo}>log</button>
+
             </div>
         )
     }
