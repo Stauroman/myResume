@@ -1,5 +1,5 @@
 import React, {Component} from "react"
-
+import {BrowserRouter, Router, Link} from 'react-router-dom'
 
 export default class RegistrationForm extends Component {
     state = {
@@ -69,6 +69,8 @@ export default class RegistrationForm extends Component {
         const strUserInfo = JSON.stringify(userInfo);
         localStorage.setItem(`${userInfo.login}`, strUserInfo);
         this.clearState()
+        this.props.history.push('/login')
+
     }
     logInfo = () => {
         console.log(this.state)

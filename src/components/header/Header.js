@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import './header.css'
 
 
@@ -10,19 +10,19 @@ const Header =()=>{
 
             <ul className="header nav">
                 <li className="nav-item">
-                    <Link to="/"
-                          className="nav-link link ">Тут будет название проекта</Link>
+                    <NavLink to="/"
+                          className="nav-link link ">Тут будет название проекта</NavLink>
                 </li>
                 <li className="nav-item" style={{marginLeft: "auto"}}>
-                    <Link to="/registration"
+                    <NavLink to="/registration"
                           className="nav-link link"
 
                     >Зарегистрироваться
-                    </Link>
+                    </NavLink>
                 </li>
                 <li className="nav-item">
-                    <Link to="/login"
-                          className="nav-link link ">Войти</Link>
+                    <NavLink to="/login"
+                          className="nav-link link ">Войти</NavLink>
                 </li>
             </ul>
 
