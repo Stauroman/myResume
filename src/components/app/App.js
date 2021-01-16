@@ -4,7 +4,15 @@ import './App.css';
 import RegistrationForm from "../RegistrationForm";
 import LoginForm from "../LoginForm";
 import Header from "../header/Header";
+import Main from "../mainContent/MainPage";
+import {Card} from "../cards/Card";
+
+
+
 class App extends Component {
+
+
+
     render() {
 
 
@@ -12,7 +20,8 @@ class App extends Component {
             <div>
                 <Router>
                 <Header/>
-                <Route path="/" exact render={()=> <h1>Main Page</h1>} />
+                <Main/>
+                <Route path="/" exact component={Card} />
                 <Route path="/registration" component={RegistrationForm} />
                 <Route path="/login" component={LoginForm} />
                 </Router>
