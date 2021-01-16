@@ -1,5 +1,4 @@
 import React, {Component} from "react"
-import {BrowserRouter, Router, Link} from 'react-router-dom'
 
 export default class RegistrationForm extends Component {
     state = {
@@ -73,7 +72,7 @@ export default class RegistrationForm extends Component {
 
     }
     logInfo = () => {
-        console.log(this.state)
+        //console.log(this.state)
     }
     clearState = () => {
         this.setState({

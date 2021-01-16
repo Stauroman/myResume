@@ -21,7 +21,7 @@ export default class LoginForm extends Component {
         this.props.history.push('/')
     }
     logInfo = () => {
-        console.log("isPasswordValid " + this.state.isPasswordValid)
+       // console.log("isPasswordValid " + this.state.isPasswordValid)
     }
 
     render() {
