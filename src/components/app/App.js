@@ -5,7 +5,7 @@ import RegistrationForm from "../RegistrationForm";
 import LoginForm from "../LoginForm";
 import Header from "../header/Header";
 import Main from "../mainContent/MainPage";
-import {Card} from "../cards/Card";
+import {Table} from "../table/Table";
 
 
 
@@ -21,7 +21,7 @@ class App extends Component {
                 <Router>
                 <Header/>
                 <Main/>
-                <Route path="/" exact component={Card} />
+                <Route path="/" exact component={Table} />
                 <Route path="/registration" component={RegistrationForm} />
                 <Route path="/login" component={LoginForm} />
                 </Router>
