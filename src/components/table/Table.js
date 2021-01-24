@@ -14,9 +14,10 @@ export const Table = () => {
         getData();
     }, []);
 
+
     const getData = async () => {
 
-        await axios.get("https://nikolaev-resume-default-rtdb.firebaseio.com/trainers/1.json")
+        await axios.get("https://nikolaev-resume-default-rtdb.firebaseio.com/allTrainers.json")
             .then(response => {
                 setData(response.data);
                 setIsLoading(false);
