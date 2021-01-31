@@ -8,6 +8,7 @@ import Header from "../header/Header";
 import Main from "../mainContent/MainPage";
 import {Table} from "../table/Table";
 import {Profile} from "../profile/Profile";
+import {CreateProfileForm} from "../userForms/CreateProfileForm";
 
 const browserHistory = createBrowserHistory();
 
@@ -27,6 +28,8 @@ class App extends Component {
                 <Route path="/profile/:id?" exact><Profile /> </Route>
                 <Route path="/registration" component={RegistrationForm} />
                 <Route path="/login" component={LoginForm} />
+                <Route path="/createprofile" component={CreateProfileForm} />
+
                 </Router>
             </div>
 

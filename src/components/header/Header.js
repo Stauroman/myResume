@@ -14,6 +14,13 @@ const Header =()=>{
                           className="nav-link link ">Тут будет название проекта</NavLink>
                 </li>
                 <li className="nav-item" style={{marginLeft: "auto"}}>
+                    <NavLink to="/createprofile"
+                             className="nav-link link"
+
+                    >Стать исполнителем
+                    </NavLink>
+                </li>
+                <li className="nav-item" style={{marginLeft: "auto"}}>
                     <NavLink to="/registration"
                           className="nav-link link"
 
