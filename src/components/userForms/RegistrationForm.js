@@ -143,8 +143,8 @@ export default class RegistrationForm extends Component {
                     </button>
 
                 </form>
-                <button onClick={this.logInfo}>log</button>
-                <button onClick={this.clearState}>clear</button>
+                {/*<button onClick={this.logInfo}>log</button>*/}
+                {/*<button onClick={this.clearState}>clear</button>*/}
             </div>
         )
     }

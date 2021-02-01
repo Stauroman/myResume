@@ -8,12 +8,13 @@ const Header =()=>{
     return (
         <div >
 
-            <ul className="header nav">
-                <li className="nav-item">
+
+            <ul className="header ">
+                <li className="nav-item" style={{marginRight: "auto"}}>
                     <NavLink to="/"
-                          className="nav-link link ">Тут будет название проекта</NavLink>
+                          className="nav-link link ">Твой Персональный Тренер</NavLink>
                 </li>
-                <li className="nav-item" style={{marginLeft: "auto"}}>
+                <li className="nav-item" >
                     <NavLink to="/createprofile"
                              className="nav-link link"
 

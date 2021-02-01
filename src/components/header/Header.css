@@ -1,32 +1,33 @@
 .header {
     margin-top: .5rem;
     padding-left: 10px;
-    background-color: gray;
+    background-color: #007afe;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-
-
-.header ul li {
+    margin-bottom: 40px;
     list-style: none;
-    margin: 0;
-    padding: .5rem 1rem;
-    border-radius: 7px;
+    border-radius: 5px;
+    }
 
+
+.nav-item{
+    list-style: none;
+    text-decoration-color: cornsilk;
+
+    border-radius: 5px;
+    border: 1px ;
+
+}
+.nav-item :hover {
+    color: #d7d7d7;
 
 }
 
-.header ul li:hover {
-    background-color: #282c34;
-}
-
-.header a:hover {
-    text-decoration: dashed;
-}
 .link {
-    color: darkgray;
+    color: white;
 }
-
-
+.link :hover {
+    color: #d7d7d7;
+}
 

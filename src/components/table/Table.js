@@ -35,7 +35,7 @@ export const Table = () => {
                 isLoading ?
                     <Loading />
                     :
-                    <>
+                    <div className="cardTable">
                         {
                             data ?  data.map((el) => {
                             return (
@@ -45,7 +45,7 @@ export const Table = () => {
                                 :
                                 <NoContentMsg Refresh={getData}/>
                         }
-                    </>
+                    </div>
             }
         </>
     )

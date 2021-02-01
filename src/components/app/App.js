@@ -20,7 +20,7 @@ class App extends Component {
 
 
         return (
-            <div>
+            <div className="container">
                 <Router history={browserHistory}>
                 <Header/>
                 <Main/>
