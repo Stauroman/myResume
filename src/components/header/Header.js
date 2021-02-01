@@ -18,7 +18,7 @@ const Header =()=>{
                     <NavLink to="/createprofile"
                              className="nav-link link"
 
-                    >Стать исполнителем
+                    >Стать тренером
                     </NavLink>
                 </li>
                 <li className="nav-item" style={{marginLeft: "auto"}}>
