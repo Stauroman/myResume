@@ -1,5 +1,6 @@
-import React, {Component} from "react"
-import {BrowserRouter as Router, Route} from "react-router-dom";
+
+import * as React from "react";
+import {Router, Route} from "react-router-dom";
 import { createBrowserHistory } from 'history';
 import './App.css';
 import RegistrationForm from "../userForms/RegistrationForm";
@@ -12,16 +13,11 @@ import {CreateProfileForm} from "../userForms/CreateProfileForm";
 
 const browserHistory = createBrowserHistory();
 
-class App extends Component {
+const App: React.FC = () => {
 
-
-
-    render() {
-
-
-        return (
-            <div className="container">
-                <Router history={browserHistory}>
+    return (
+        <div className="container">
+            <Router history={browserHistory}>
                 <Header/>
                 <Main/>
                 <Route path="/" exact component={Table} />
@@ -30,11 +26,11 @@ class App extends Component {
                 <Route path="/login" component={LoginForm} />
                 <Route path="/createprofile" component={CreateProfileForm} />
 
-                </Router>
-            </div>
+            </Router>
+        </div>
 
-        )
-    }
+    )
 }
+
 
 export default App;

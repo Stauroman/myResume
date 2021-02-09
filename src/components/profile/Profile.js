@@ -26,7 +26,7 @@ export const Profile = () => {
             });
     };
 
-    let history = useHistory();
+    const history = useHistory();
     const backToList = () => {
         history.push("/");
     }
