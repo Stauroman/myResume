@@ -104,7 +104,7 @@ export default class RegistrationForm extends Component {
                     </div>
                     <div className="form-group">
                         <label htmlFor="login">Введите ваш никнейм</label>
-                        <input name="login" type="login" className="form-control" id="login"
+                        <input name="login" type="text" className="form-control" id="login"
                                placeholder="Введите логин"
                                onChange={this.handleChange}
                                value={this.state.login}/>
@@ -124,14 +124,14 @@ export default class RegistrationForm extends Component {
                                value={this.state.surname}/>
                     </div>
                     <div className="form-group">
-                        <label htmlFor="password">придумайте пароль, не менее 8ми символов</label>
+                        <label htmlFor="password">Придумайте пароль, не менее 8ми символов</label>
                         <input name="password" type="password" className="form-control" id="password"
                                placeholder="Введите пароль"
                                onChange={this.handleChange}
                                value={this.state.password}/>
                     </div>
                     <div className="form-group">
-                        <label htmlFor="rePassword">повторите пароль</label>
+                        <label htmlFor="rePassword">Повторите пароль</label>
                         <input name="rePassword" type="password" className="form-control" id="rePassword"
                                placeholder="Повторите пароль"
                                onChange={this.handleChange}

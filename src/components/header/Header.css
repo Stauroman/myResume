@@ -1,14 +1,3 @@
-.header {
-    margin-top: .5rem;
-    padding-left: 10px;
-    background-color: #007afe;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 40px;
-    list-style: none;
-    border-radius: 5px;
-    }
 
 
 .nav-item{
@@ -31,3 +20,11 @@
     color: #d7d7d7;
 }
 
+.px1 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.mt2 {
+    margin-top: 2rem;
+}

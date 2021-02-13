@@ -33,7 +33,7 @@ export default class LoginForm extends Component {
                     <div>
                         <div className="form-group">
                             <label htmlFor="login">Введите логин для входа</label>
-                            <input name="login" type="login" className="form-control" id="login"
+                            <input name="login" type="text" className="form-control" id="login"
                                    placeholder="Введите логин"
                                    onChange={this.handleChange}
                                    value={this.state.login}/>
