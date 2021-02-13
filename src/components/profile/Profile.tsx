@@ -4,10 +4,24 @@ import './Profile.css'
 import axios from "axios";
 import {Loading} from "../сaps/Loading";
 
-export const Profile = () => {
+interface IProfile {
+    name: string;
+    id: number;
+    age: number;
+    promo: string;
+    city: string;
+    price: string;
+    exp: number;
+    img: string;
+}
+interface IParams {
+    params: string;
+    id: string;
+}
+export const Profile:React.FC = () => {
 
-    const params = useParams();
-    const [data, setData] = useState({name: "", id: "", age: "",promo:"",city:"",price:"",exp:"",img:""});
+    const params = useParams<IParams>();
+    const [data, setData] = useState<IProfile>({name: "", id: 0, age: 0,promo:"",city:"",price:"",exp:0,img:""});
     const [isLoading, setIsLoading] = useState(true);
     useEffect(() => {
         getData();

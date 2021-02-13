@@ -1,7 +1,7 @@
 
 import * as React from "react";
-import {Router, Route} from "react-router-dom";
-import { createBrowserHistory } from 'history';
+import {BrowserRouter as Router, Route} from "react-router-dom";
+//import { createBrowserHistory } from 'history';
 import './App.css';
 import RegistrationForm from "../userForms/RegistrationForm";
 import LoginForm from "../userForms/LoginForm";
@@ -11,13 +11,13 @@ import {Table} from "../table/Table";
 import {Profile} from "../profile/Profile";
 import {CreateProfileForm} from "../userForms/CreateProfileForm";
 
-const browserHistory = createBrowserHistory();
+//const browserHistory = createBrowserHistory();
 
 const App: React.FC = () => {
 
     return (
         <div className="container">
-            <Router history={browserHistory}>
+            <Router >
                 <Header/>
                 <Main/>
                 <Route path="/" exact component={Table} />
