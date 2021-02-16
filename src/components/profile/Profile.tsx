@@ -29,7 +29,7 @@ export const Profile:React.FC = () => {
 
     const getData = async () => {
 
-        await axios.get(`https://nikolaev-resume-default-rtdb.firebaseio.com/${params.id}.json`)
+        await axios.get(`https://my-json-server.typicode.com/Stauroman/demo/${params.id}`)
             .then(response => {
                 setData(response.data);
                 setIsLoading(false);
