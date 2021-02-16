@@ -17,7 +17,7 @@ export const Table = () => {
 
     const getData = async () => {
 
-        await axios.get("https://nikolaev-resume-default-rtdb.firebaseio.com/allTrainers.json")
+        await axios.get("https://my-json-server.typicode.com/Stauroman/demo/allTrainers")
             .then(response => {
                 setData(response.data);
                 setIsLoading(false);
