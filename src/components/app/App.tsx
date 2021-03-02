@@ -6,7 +6,6 @@ import './App.css';
 import RegistrationForm from "../userForms/RegistrationForm";
 import LoginForm from "../userForms/LoginForm";
 import Header from "../header/Header";
-import Main from "../mainContent/MainPage";
 import {Table} from "../table/Table";
 import {Profile} from "../profile/Profile";
 import {CreateProfileForm} from "../userForms/CreateProfileForm";
@@ -19,7 +18,6 @@ const App: React.FC = () => {
         <div className="container">
             <Router >
                 <Header/>
-                <Main/>
                 <Route path="/" exact component={Table} />
                 <Route path="/profile/:id?" exact><Profile /> </Route>
                 <Route path="/registration" component={RegistrationForm} />

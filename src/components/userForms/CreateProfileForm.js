@@ -54,7 +54,7 @@ export const CreateProfileForm = () => {
                 </div>
                 <div className="form-group">
                     <label htmlFor="promo">Расскажите о себе</label>
-                    <textarea name="promo"  className="form-control" id="promo"
+                    <input name="promo"  className="form-control" id="promo"
                            placeholder="Расскажите о себе"
                               onChange={e=> setPromo(e.target.value)}
                               value={promo}
